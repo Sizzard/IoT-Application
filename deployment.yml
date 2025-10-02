@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wil42
+  labels:
+    app: wil42
+spec:
+  selector:
+    matchLabels:
+      app: wil42
+  template:
+    metadata:
+      labels:
+        app: wil42
+    spec:
+      containers:
+      - name: wil42
+        image: nginx
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - name: html-volume
+          mountPath: /usr/share/nginx/html
+      volumes:
+      - name: html-volume
+        configMap:
+          name: wil42
