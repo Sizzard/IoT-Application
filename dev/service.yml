@@ -9,4 +9,4 @@ spec:
   ports:
     - port: 80
       targetPort: 80
-      noePort: 30080
+      nodePort: 30080
