@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-one
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>Welcome from app 1</title>
+      </head>
+      <body>
+        <p>This is Deployment One</p>
+      </body>
+    </html>
